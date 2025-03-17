@@ -74,10 +74,6 @@ let g=false;
 // Fungsi menangani klik menu
 function handleMenuClick(option) {
   if (option === "Play") {
-    playMusic();
-  } else if (option === "Settings") {
-    stopMusic();
-  } else if (option === "Exit") {
     ctx.drawImage(exitImg, 0, 0, canvas.width, canvas.height);
     
     audio.play();
@@ -89,12 +85,16 @@ function handleMenuClick(option) {
         }, 1000);
         // return;
     }
+  } else if (option === "Settings") {
+    stopMusic();
+  } else if (option === "Exit") {
+    playMusic();
   }
 }
 
 // Fungsi memainkan musik
 function playMusic() {
-  audio.play().catch((error) => console.log("Audio play error:", error));
+  // audio.play().catch((error) => console.log("Audio play error:", error));
 }
 
 // Fungsi menghentikan musik
