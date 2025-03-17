@@ -74,9 +74,9 @@ let g=false;
 // Fungsi menangani klik menu
 function handleMenuClick(option) {
   if (option === "Play") {
+    audio.play();
     ctx.drawImage(exitImg, 0, 0, canvas.width, canvas.height);
     
-    audio.play();
     if(g==false){
       setTimeout(() => {
         // console.log("rr");
